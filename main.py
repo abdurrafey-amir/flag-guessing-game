@@ -4,9 +4,10 @@ import random
 countries = requests.get('https://flagcdn.com/en/codes.json').json()
 country_names = list(countries.values())
 country_codes = list(countries.keys())
-country_name = random.choice(country_names)
+country_name = random.choices(country_names, k=4)
+# print(country_name)
 country_code = random.choice(country_codes)
-print(country_code)
+# print(country_code)
 
 # flag
 flag  = requests.get(f'https://flagcdn.com/256x192/{country_code}.png')
