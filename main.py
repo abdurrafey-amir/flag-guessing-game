@@ -9,9 +9,9 @@ country_code = random.choice(country_codes)
 print(country_code)
 
 # flag
-flag  = requests.get(f'https://flagcdn.com/224x168/{country_code}.png')
+flag  = requests.get(f'https://flagcdn.com/256x192/{country_code}.png')
 # print(flag.status_code)
-with open(f'{country_code}.png', 'wb') as f:
+with open(f'flag.png', 'wb') as f:
     f.write(flag.content)
 
 # guess the country
